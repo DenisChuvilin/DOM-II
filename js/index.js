@@ -18,3 +18,15 @@ logo.addEventListener('mouseleave', () => (logo.style.color = 'black'));
 const all_imgs = document.querySelectorAll('img');
 
 window.addEventListener('scroll', () => all_imgs.forEach(e => (e.style.transform = 'scale(.5)')));
+
+//header bar turns blue
+const header_bar = document.querySelector('.main-navigation');
+header_bar.addEventListener('dblclick', () => (header_bar.style.backgroundColor = 'blue'));
+
+//border appears for each topic and text
+
+const section_block = document.getElementsByTagName('section');
+Array.from(section_block).forEach(block => {
+  block.addEventListener('mouseenter', () => (block.style.border = '8px dotted blue'));
+  block.addEventListener('mouseleave', () => (block.style.border = 'none'));
+});
